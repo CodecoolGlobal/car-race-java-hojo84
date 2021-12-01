@@ -2,7 +2,7 @@ package com.codecool.car_race;
 
 import java.util.Random;
 
-public class Truck extends Vehichle {
+public class Truck extends Vehicle {
     private final int NORMAL_SPEED = 100;
 
     public Truck() {
