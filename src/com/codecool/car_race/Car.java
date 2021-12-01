@@ -23,29 +23,39 @@ public class Car extends Vehichle {
             "Inquiry",
             "Phantom",
             "Mystery"));
+    private final int MIN_SPEED = 80;
+    private final int MAX_SPEED = 110;
 
 
     public Car() {
-        final int MAX_SPEED=110;
-        final int MIN_SPEED=80;
         Random random = new Random();
         name = "";
         for (byte i = 0; i < NO_OF_NAME_COMPONENTS; i++) {
             name += LIST_OF_CARNAMES.get(random.nextInt(LIST_OF_CARNAMES.size())) + " ";
         }
         name = name.trim();
-        normalSpeed= random.nextInt(MAX_SPEED-MIN_SPEED+1)+MIN_SPEED;
-        actualSpeed=normalSpeed;
-        distanceTraveled=0;
+        normalSpeed = random.nextInt(MAX_SPEED - MIN_SPEED + 1) + MIN_SPEED;
+        actualSpeed = 0;
+        distanceTraveled = 0;
     }
 
     @Override
     public void prepareForLap() {
-
+        actualSpeed = normalSpeed;
     }
 
     @Override
     public void moveForAnHour() {
+        distanceTraveled += actualSpeed;
+    }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", actualSpeed=" + actualSpeed +
+                ", normalSpeed=" + normalSpeed +
+                ", distanceTraveled=" + distanceTraveled +
+                '}';
     }
 }
