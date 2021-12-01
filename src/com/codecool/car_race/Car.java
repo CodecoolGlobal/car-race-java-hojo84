@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class Car extends Vehichle {
+public class Car extends Vehicle {
     private final byte NO_OF_NAME_COMPONENTS = 2;
     private final List<String> LIST_OF_CARNAMES = new ArrayList<>(Arrays.asList("Vulture", "Spirit", "Tempest", "Eminence",
             "Striker",

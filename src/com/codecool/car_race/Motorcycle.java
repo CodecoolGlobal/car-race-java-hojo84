@@ -1,6 +1,6 @@
 package com.codecool.car_race;
 
-public class Motorcycle extends Vehichle {
+public class Motorcycle extends Vehicle {
     private final int NORMAL_SPEED = 100;
     private static int instanceCounter = 1;
 
